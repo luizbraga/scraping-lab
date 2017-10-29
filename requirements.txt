@@ -1,0 +1,14 @@
+# Scraping tools
+scrapy=1.4.0
+selenium=3.6.0
+beautifulsoup4=4.6.0
+requests=2.18.4
+
+
+# Python tools
+ipython=6.2.1
+ipdb-0.10.3
+
+
+# Database tools
+pymongo=3.5.1
