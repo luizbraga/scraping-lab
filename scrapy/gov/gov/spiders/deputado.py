@@ -26,7 +26,7 @@ class DeputadoSpider(scrapy.Spider):
                     callback=self.pagina_deputado)
 
     def pagina_deputado(self, response):
-        # TODO: Loader not working properly
+        # @todo Loader not working properly
         loader = DeputadoLoader(response=response)
         loader.add_xpath('nome', DEPUTADO_XPATH.format(x=1))
         loader.add_xpath('telefones', DEPUTADO_XPATH.format(x=4))
