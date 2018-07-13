@@ -4,7 +4,7 @@ from gov.loaders import DeputadoLoader
 
 DEPUTADO_XPATH = (
     '//div[@id="content"]//div[@class="bloco clearedBox"]/ul/li[{x}]/text()')
-    
+
 
 class DeputadoSpider(scrapy.Spider):
     name = 'deputado'
@@ -26,7 +26,7 @@ class DeputadoSpider(scrapy.Spider):
                     callback=self.pagina_deputado)
 
     def pagina_deputado(self, response):
-        # @makeAnIssue: Loader not working properly
+        # TODO: Loader not working properly
         loader = DeputadoLoader(response=response)
         loader.add_xpath('nome', DEPUTADO_XPATH.format(x=1))
         loader.add_xpath('telefones', DEPUTADO_XPATH.format(x=4))
